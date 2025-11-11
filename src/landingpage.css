@@ -1,6 +1,250 @@
+/* ======== VARIÁVEIS DE CORES ======== */
+:root {
+    --azul-marinho: #0A1A3D;
+    --azul-claro: #1E3A8A;
+    --cinza-claro: #f5f5f5;
+    --cinza-escuro: #333;
+    --preto: #000;
+    --branco: #fff;
+}
+
+/* ======== GLOBAL ======== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
+body {
+    color: var(--cinza-escuro);
+    background-color: var(--branco);
+    line-height: 1.6;
+}
+
+/* ======== HEADER ======== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--branco);
+    border-bottom: 2px solid var(--azul-marinho);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 70px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--azul-marinho);
+    font-weight: 600;
+    margin-left: 30px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--azul-claro);
+    text-decoration: underline;
+}
+
+/* ======== HERO ======== */
+#Hero {
+    background: linear-gradient(to bottom right, var(--azul-marinho), #1a3570);
+    color: var(--branco);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#Hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#Hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    background-color: var(--branco);
+    color: var(--azul-marinho);
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-cta:hover {
+    opacity: 0.7;
+}
+
+/* ======== SECTION+ ======== */
+section {
+    padding: 80px 8%;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--azul-marinho);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* ======== GRADE ======== */
+.disciplinas {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.disciplinas li {
+    margin-bottom: 8px;
+}
+
+#Grade a {
+    color: var(--azul-claro);
+}
+
+#Grade a:hover {
+    opacity: 0.8;
+}
+/* ======== MERCADO DE TRABALHO ======== */
+#Mercado {
+    background-color: var(--cinza-claro);
+}
+
+.mercado-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.mercado-cards .card {
+    background-color: var(--branco);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mercado-cards .card h3 {
+    color: var(--azul-marinho);
+    margin-bottom: 10px;
+}
+
+.mercado-cards .card p {
+    color: var(--cinza-escuro);
+}
+
+.mercado-cards .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ======== FAQ ======== */
+.faqP {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.faqP .card {
+    background-color: var(--branco);
+    border-left: 5px solid var(--azul-marinho);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faqP .card h3 {
+    color: var(--azul-marinho);
+    margin-bottom: 10px;
+}
+
+/* ======== FOOTER ======== */
+footer {
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+    padding: 40px 8% 20px 8%;
+}
+
+.footerP {
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.logos img {
+    width: 180px;
+}
+
+.endereco p,
+.contato p {
+    margin-bottom: 8px;
+}
+
+.contato a {
+    color: var(--branco);
+    text-decoration: underline;
+}
+
+.copyr {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px 10px 0 0;
+        font-size: 12px;
+    }
+
+    #Hero h1 {
+        font-size: 2rem;
+    }
+
+    .footerP {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logos {
+        justify-content: center;
+    }
+}
